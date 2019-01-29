@@ -1,7 +1,7 @@
 class CashRegister
   attr_accessor :items, :discount, :total, :last_transction
 
-  def intialize(discount=0)
+  def intialize(discount=nil)
     @total=0
     @discount=discount
     @items =[]
@@ -22,7 +22,7 @@ class CashRegister
         "After the discount, the total comes to $#{self.total}."
       else
         "There is no discount to apply."
-      end 
+      end
   end
 
   def void_last_transaction
